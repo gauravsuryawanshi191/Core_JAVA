@@ -7,6 +7,7 @@ Java app must continue to run till user chooses exit option.
 import java.util.Scanner;
 class Calculator{
 	public static void main(String[] args){
+		System.out.print("==============================================================================");
 		System.out.print("Enter 2 Numbers: ");
 		Scanner sc= new Scanner(System.in);
 		int n1=sc.nextInt();

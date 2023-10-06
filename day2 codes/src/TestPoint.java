@@ -9,7 +9,7 @@ class TestPoint{
 		Point2D p1=new Point2D(sc.nextDouble(),sc.nextDouble());
 		System.out.println("Enter Co-ordinates for Point2:");
 		Point2D p2=new Point2D(sc.nextDouble(),sc.nextDouble());
-		System.out.println("===========================================================================================");
+		System.out.println("==========================================================================================");
 		System.out.println("1.Show Co-ordinates\n2.Check Equality of Points\n3.Calculate Distance between Points\n4.Exit!");
 		while(!exit){
 			System.out.println("---------------------------------------------------------------------------------------------");
