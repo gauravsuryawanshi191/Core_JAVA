@@ -58,7 +58,8 @@ public class FruitBasket {
 			case 4:
 				// 4.Display name of all in Basket
 				for (Fruit f : basket)
-					System.out.println(f);
+					if (f != null)
+						System.out.println(f);
 				break;
 			case 5:
 				// 5.Display name,colour,weight,taste of all fruits in Basket
