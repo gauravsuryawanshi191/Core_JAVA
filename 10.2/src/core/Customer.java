@@ -17,7 +17,7 @@ public class Customer {
 	private String lastName;
 	private String emailId;
 	private String password;
-	private double registrationAmount;
+	private int registrationAmount;
 	private LocalDate dateOfBirth;
 	private ServicePlan servicePlan;
 	private static int idGenerator;
@@ -27,7 +27,7 @@ public class Customer {
 		this.emailId = emailId;
 	}
 
-	public Customer(String firstName, String lastName, String emailId, String password, double registrationAmount,
+	public Customer(String firstName, String lastName, String emailId, String password, int registrationAmount,
 			LocalDate dateOfBirth, ServicePlan servicePlan) {
 		super();
 		this.customer_id = ++idGenerator;
@@ -42,18 +42,26 @@ public class Customer {
 
 	@Override
 	public String toString() {
-		return "Customer [customer_id=" + customer_id + ", Name=" + firstName +" "+ lastName
-				+ ", emailId=" + emailId + ", registrationAmount=" + registrationAmount + ", dateOfBirth=" + dateOfBirth
-				+ ", servicePlan=" + servicePlan + "]";
+		return "customer_id=" + customer_id + ", Name=" + firstName + " " + lastName + ",\nemailId=" + emailId
+				+ ",\nregistrationAmount=" + registrationAmount + ",\ndateOfBirth=" + dateOfBirth + ",\nservicePlan="
+				+ servicePlan + "\n";
 	}
+
 	@Override
 	public boolean equals(Object obj) {
-		if(obj instanceof Customer) {
+		if (obj instanceof Customer) {
 			Customer tempCustomer = (Customer) obj;
-  			return this.emailId.equals(tempCustomer.emailId);
+			return this.emailId.equals(tempCustomer.emailId);
 		}
 		return false;
 	}
-	
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 }
