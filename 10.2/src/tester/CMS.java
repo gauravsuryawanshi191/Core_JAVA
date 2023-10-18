@@ -1,7 +1,11 @@
 package tester;
 
+import static utils.CustomerSupport.CustomerLogin;
+import static utils.CustomerSupport.data;
+import static utils.CustomerSupport.passwordModification;
+import static utils.CustomerSupport.unSubcribe;
 import static utils.CustomerValidations.superValidater;
-import static utils.CustomerSupport.*;
+
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -42,10 +46,21 @@ public class CMS {
 						CustomerLogin(sc.next(), sc.next(), customerlist);
 						break;
 					case 3:
+						// System.out.println("Login Required for changing password\nLogin:");
+						System.out.println("Enter EmailId,Password & New Password");
+						passwordModification(sc.next(), sc.next(), sc.next(), customerlist);
+						System.out.println("Success\nPassword Updates!");
 
 						break;
 					case 4:
-
+						System.out.println("Unsubricing User\n Enter EmailId & Password:");
+						String emailId= sc.next();
+						String pass= sc.next();
+						System.out.println("wait...");
+						Thread.sleep(3000);;
+						System.out.print("Enter YES to Unsubcribe:");
+						unSubcribe(emailId, pass, sc.next(), customerlist);
+						System.out.println("Success\nUnsubcribed User!");
 						break;
 					case 5:
 						for (Customer tempCustomer : customerlist)
