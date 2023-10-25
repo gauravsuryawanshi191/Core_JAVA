@@ -8,7 +8,7 @@ import java.util.Scanner;
 import exceptionPKG.exception.ExpiryException;
 import exceptionPKG.exception.SpeedOutOfRangeException;;
 
-public class SpeedTest {
+public class Tester {
 
 	public static void main(String[] args) {
 		try (Scanner sc = new Scanner(System.in)) {
