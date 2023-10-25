@@ -3,9 +3,12 @@ package tester;
 import static utils.CustomerValidations.superValidater;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
 import java.util.TreeMap;
 
 import static utils.CustomerValidations.*;
@@ -69,9 +72,9 @@ public class CMS {
 							System.out.println(tempCustomer);
 						break;
 					case 6:
-						TreeMap<String, Customer> tempMap= new TreeMap<String, Customer>(customers);
+						TreeMap<String, Customer> tempMap = new TreeMap<>(customers);
 						tempMap.comparator();
-						for(Customer tempCustomer: tempMap.values())
+						for (Customer tempCustomer : tempMap.values())
 							System.out.println(tempCustomer);
 						break;
 					case 0:
